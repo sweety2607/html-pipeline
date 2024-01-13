@@ -1,4 +1,3 @@
-
 pipeline {
     agent {label "dev-server"}
     stages{
@@ -17,7 +16,6 @@ pipeline {
                   sh "docker push html-app-test1:latest"
                 }
             }
-        }
         stage("Deploy"){
             steps{
 			
