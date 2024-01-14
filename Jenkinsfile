@@ -8,18 +8,18 @@ pipeline {
         }
         stage("Build and Test"){
             steps{
-                sh " sudo docker build -t html-app-test1 ."
+                sh " docker build -t html-app-test1 ."
             }
         }
         stage("Push to Docker Hub"){
             steps{
-                  sh " sudo docker push html-app-test1:latest"
+                  sh " docker push html-app-test1:latest"
                 }
             }
         stage("Deploy"){
             steps{
 			
-                sh " sudo docker-compose down && docker-compose up -d"
+                sh " docker-compose down && docker-compose up -d"
             }
         }
     }
