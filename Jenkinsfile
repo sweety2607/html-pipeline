@@ -5,6 +5,12 @@ pipeline {
             steps{
                 git url: "https://github.com/sweety2607/node-todo-cicd.git", branch: "main"
             }
+
+
+environment{
+ DOCKERHUB_CREDENTIALS = credentials ("dockerhub_id")
+
+}
         }
         stage("Build and Test"){
             steps{
