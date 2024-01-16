@@ -13,7 +13,7 @@ pipeline {
         }
         stage("Push to Docker Hub"){
             steps{
-                  sh " docker push sweety2607/html-app-test1:latest"
+                  sh " docker push html-app-test1:latest"
                 }
             }
         stage("Deploy"){
