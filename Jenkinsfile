@@ -25,7 +25,7 @@ environment{
         stage("Deploy"){
             steps{
 			
-                sh " docker-compose down && docker-compose up -d"
+                sh "docker run -p 80:80 -d sweety2607/html-app-test1:latest"
             }
         }
     }
