@@ -4,7 +4,9 @@ pipeline {
         stage("Clone Code"){
             steps{
                 git url: "https://github.com/sweety2607/html-pipeline.git", branch: "main"
+                 sh " git pull "
             }
+              
 
 
         }
