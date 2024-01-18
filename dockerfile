@@ -14,6 +14,6 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d/
 
 # Expose port 80 to the outside world
-EXPOSE 80
+EXPOSE 5001
 
 # CMD is inherited from the base image (nginx:alpine) and doesn't need to be specified again
