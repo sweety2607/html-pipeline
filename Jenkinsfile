@@ -22,7 +22,7 @@ pipeline {
         stage("Deploy"){
             steps{
 			
-                sh "docker run -p 8001:8001 -d sweety2607/html-app-test1:latest"
+                sh "docker run -p 5000:5000 -d sweety2607/html-app-test1:latest"
             }
         }
     }
