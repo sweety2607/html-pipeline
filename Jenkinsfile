@@ -22,8 +22,9 @@ pipeline {
         stage("Deploy"){
             steps{
 			
-                sh "docker run -p 80:80 -d sweety2607/html-app-test1:latest"
+                sh "docker run -p 5000:5000 -d sweety2607/html-app-test1:latest"
             }
         }
     }
 }
+
