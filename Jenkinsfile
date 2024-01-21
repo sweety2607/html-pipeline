@@ -22,7 +22,7 @@ pipeline {
         stage("Deploy"){
             steps{
 			
-                sh "docker run -p 80:80 -d sweety2607/html-app-test1:latest"
+                sh "ssh ubuntu@35.172.183.68 'docker run -p 80:80 -d sweety2607/html-app-test1:latest'"
             }
         }
     }
